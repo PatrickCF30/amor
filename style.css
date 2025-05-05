@@ -197,3 +197,24 @@ body {
         opacity: 0;
     }
 }
+
+@media (max-width: 820px) {
+    #card {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+    }
+
+    .side {
+        width: 100%;
+        height: auto;
+    }
+
+    .side.one {
+        transform: none;
+    }
+
+    .side.two {
+        transform: none;
+    }
+}
