@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family= Tangerine, serif');
 
+
 #card {
-   height:500px;
-   width:800px;
-   margin:5em auto;
-   position: fixed;
-  top: -15px;
-   left: 25%;
-   display:flex;
-   visibility:hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.4); /* semitransparente para enfocar la carta */
 }
+
 #card h2 {
    font-size:3em;
    margin:0;
-   color: #3c88a4;
+   color: rgba(0, 0, 0, 0.78);
    text-align: center;
 }
 #card p {
@@ -24,6 +30,12 @@
     text-shadow: 4px 4px 4px #aaa;
 }
 
+.card-content {
+    height: 500px;
+    width: 800px;
+    display: flex;
+
+}
 
 .side {
    background:#eee;
@@ -59,17 +71,17 @@ body {
    background-color: #f1e3d3;
    overflow: hidden;
  }
- 
+
  .valentines-day {
    position: relative;
    cursor: pointer;
  }
- 
+
  .envelope {
    position: relative;
    filter: drop-shadow(0 0 25px rgba(0,0,0,.3));
  }
- 
+
  .envelope:before {
    content:"";
    position: absolute;
@@ -81,7 +93,7 @@ body {
    left:-37px;
    top:-82px;
  }
- 
+
  .envelope:after {
    content:"";
    position: absolute;
@@ -91,7 +103,7 @@ body {
    left:-90px;
    top:45px;
  }
- 
+
  .heart {
    position: relative;
    background-color: #e01911;
@@ -104,7 +116,7 @@ body {
    filter: drop-shadow(0 -10px 25px rgba(0,0,0,.3));
    transition: .5s;
  }
-   
+
  .heart:before, .heart:after {
    content:"";
    background-color: #e01911;
@@ -113,15 +125,15 @@ body {
    width: 180px;
    position: absolute;
    }
-   
+
  .heart:before {
    top:-100px;
    left:0;}
-   
+
  .heart:after {
    left:100px;
    top:0;}
- 
+
  .front {
    position: absolute;
    width:0;
@@ -133,7 +145,7 @@ body {
    left:80px;
    z-index:4;
  }
- 
+
  .front:before {
    content:"";
    position: absolute;
@@ -145,7 +157,7 @@ body {
    top:-113px;
    left:-170px;
  }
- 
+
  .front:after {
    width:0;
    height:0;
@@ -157,7 +169,7 @@ body {
    top:-36px;
    left:-170px;
  }
- 
+
  .text {
    position: absolute;
    font-family: arial;
@@ -169,11 +181,11 @@ body {
    left:15px;
    transition: .5s;
  }
- 
+
  .valentines-day:hover .heart {
    transform: translateY(-50px) rotate(-45deg);
  }
- 
+
  .valentines-day:hover .text {
    transform: translateY(-50px);
  }
